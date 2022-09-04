@@ -21,7 +21,12 @@ public class GameLoop : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            OnGameStart();
+            if(OnGameStart != null)
+            {
+                OnGameStart();
+            }
+
         }
+
     }
 }

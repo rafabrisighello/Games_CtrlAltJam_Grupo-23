@@ -7,6 +7,7 @@ using System;
 
 public class Client : MonoBehaviour
 {
+    [SerializeField]
     private int[] clientIndexes = { 0, 1, 2, 3 };
 
     [SerializeField]
@@ -15,23 +16,38 @@ public class Client : MonoBehaviour
     [SerializeField]
     private string[] frases;
 
+    [SerializeField]
     private ArrayList clientsLeft = new ArrayList();
 
+    [SerializeField]
     private int currentIndex;
-    private Sprite currentImage;
+
+    private Image currentImage;
+
+    [SerializeField]
     private string[] currentFrases;
+
+    [SerializeField]
     private TextMeshProUGUI currentText;
 
 
     private ArrayList randomIndexes = new ArrayList();
 
+    // Eventos
+    public event Action OnClientReady;
+
 
     private void Start()
     {
-        currentImage = GetComponent<Image>().sprite;
+        foreach(int index in clientIndexes)
+        {
+            clientsLeft.Add(index);
+            
+        }
+        currentImage = GetComponent<Image>();
         currentText = GameObject.FindWithTag("Frase").GetComponent<TextMeshProUGUI>();
-
-        GetComponent<GameLoop>().OnGameStart += InitializeClients;
+        currentFrases = new string[4]{"","","",""};
+        ChangeClient();
     }
 
     enum Casos
@@ -42,7 +58,7 @@ public class Client : MonoBehaviour
         Palhaço
     };
 
-    public string[] GetClientInfo(int index)
+    public void GetClientInfo(int index)
     {
         string[] frases = new string[4];
 
@@ -76,23 +92,36 @@ public class Client : MonoBehaviour
                 break;
         }
 
-        return null;
-    }
-
-    private void InitializeClients()
-    {
-        
+        currentFrases = frases;
     }
 
     private void ChangeClient()
     {
-        
+        if (clientsLeft.Count > 0)
+        {
+            currentIndex = RandomChoose(clientsLeft);
+            SetAvatarImage();
+            GetClientInfo(currentIndex);
+            SetAvatarText();
+            clientsLeft.Remove(currentIndex);
+        }
     }
 
     private int RandomChoose(ArrayList clientsLeft)
     {
-        int randIndex = UnityEngine.Random.Range(0, clientsLeft.Count);
+        int randIndex = UnityEngine.Random.Range(0, 100 * clientsLeft.Count) % clientsLeft.Count;
 
         return randIndex;
     }
+
+    private void SetAvatarImage()
+    {
+        currentImage.sprite = avatarArray[currentIndex];
+    }
+
+    private void SetAvatarText()
+    {
+        currentText.text = currentFrases[0];
+    }
+
 }

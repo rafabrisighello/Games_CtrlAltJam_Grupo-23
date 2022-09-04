@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 939
-  m_MinSize: {x: 679, y: 494}
-  m_MaxSize: {x: 14002, y: 14044}
+  m_MinSize: {x: 681, y: 494}
+  m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 6981
+  controlID: 13
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 6982
+  controlID: 14
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 222}
   m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 6983
+  controlID: 15
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,8 +210,8 @@ MonoBehaviour:
     y: 0
     width: 1100
     height: 643
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 222}
+  m_MaxSize: {x: 4004, y: 4022}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -265,8 +265,8 @@ MonoBehaviour:
     y: 0
     width: 451
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -382,9 +382,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: de60ffff
-      m_LastClickedID: -40738
-      m_ExpandedIDs: de60ffffe060ffff0a61ffff4861ffff1e62ffff6862ffff0463ffff2a71ffffde79fffff07dffff3c83ffff6a83ffff3087ffff5488ffffe0a8ffffbeb6fffff2b6ffff26b7ffff62b7ffff8cb7ffffbab7ffffe6b7ffff40b8ffffecb8ffff34bafffff6baffffb8bbffff26c0ffffcac0fffffac5ffff76c8ffffccc9ffff12caffff58caffffcecbffff30ccffff5ecdffff40ceffff22d1ffffc8d1ffff10d2ffff98d2ffffc2d2ffffecd2ffff16d3ffff42d3fffff2e6ffffa2e7fffff4ffffff92480000e048000082490000d64900005a4b0000184d0000de4d00002c4e0000be4e00007a50000062520000d0520000e2520000ec520000b0550000da5500004a560000b45600004e570000d0570000f2580000bc610000e06100003a6800004668000056680000826800009e6c0000c86c0000046d0000
+      m_SelectedIDs: 70680000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2281ffff6a81ffffe482ffff40e2ffff44e2ffff00e6fffff0f8fffff4f8ffffe6f9ffff76fbfffff4ffffff4e36000074360000b036000094380000f638000000390000f63b00002a3c0000843e0000dc3e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -444,9 +444,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 519.6196, y: 295.95468, z: -468.25}
+    m_Target: {x: 526.03687, y: 301.02844, z: -519.875}
     speed: 2
-    m_Value: {x: 519.6196, y: 295.95468, z: -468.25}
+    m_Value: {x: 526.03687, y: 301.02844, z: -519.875}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -479,9 +479,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 710.2004
+    m_Target: 633.4376
     speed: 2
-    m_Value: 710.2004
+    m_Value: 633.4376
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -572,20 +572,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/Clients
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets/Art/Clients
+  - Assets/Scripts
   m_LastFoldersGridSize: 60
   m_LastProjectPath: C:\Users\rafab\Documents\GitHub\Pague+Jam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 35}
-    m_SelectedIDs: ac690000
-    m_LastClickedID: 27052
-    m_ExpandedIDs: 000000009a3f00004e4200004c5b0000765b0000ac5b00001a5d00004063000000ca9a3b
+    scrollPos: {x: 0, y: 95}
+    m_SelectedIDs: 3e320000
+    m_LastClickedID: 12862
+    m_ExpandedIDs: 00000000242d0000262e0000c62e00007a2f00000e3200005a3200008632000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,7 +613,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 96d6ffff
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a3f000000ca9a3b
+    m_ExpandedIDs: 00000000242d0000262e0000c62e00007a2f00000e3200005a32000086320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
