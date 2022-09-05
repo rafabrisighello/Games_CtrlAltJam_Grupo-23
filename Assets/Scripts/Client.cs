@@ -21,12 +21,15 @@ public class Client : MonoBehaviour
     private string[] frases;
 
     [SerializeField]
-    public ArrayList clientsLeft = new ArrayList();
+    public List<int> clientsLeft = new List<int>();
 
     [SerializeField]
     private int currentIndex;
 
     private Image currentImage;
+    private Image balao;
+    private TextMeshProUGUI balaoFrase;
+    private TextMeshProUGUI instructions;
 
     [SerializeField]
     private string[] currentFrases;
@@ -40,8 +43,12 @@ public class Client : MonoBehaviour
     [SerializeField]
     private GameLoop gameloop;
 
+    private System.Random random;
+
+    public event Action OnClientLoaded;
     public event Action OnMedicineChosenAction;
     public event Action OnClientEndAction;
+    public event Action OnClientEmptyAction;
 
 
     private void Awake()
@@ -54,6 +61,9 @@ public class Client : MonoBehaviour
         Debug.Log(clientsLeft.Count);
 
         currentImage = GetComponent<Image>();
+        balao = GameObject.FindWithTag("Balao").GetComponent<Image>();
+        balaoFrase = balao.GetComponentInChildren<TextMeshProUGUI>();
+        instructions = GameObject.FindWithTag("Instructions").GetComponent<TextMeshProUGUI>();
         currentText = GameObject.FindWithTag("Frase").GetComponent<TextMeshProUGUI>();
         currentFrases = new string[4] { "", "", "", "" };
         colateralArray = new Sprite[4,3];
@@ -64,8 +74,16 @@ public class Client : MonoBehaviour
     {
         gameloop = GameObject.FindWithTag("GameManager").GetComponent<GameLoop>();
         gameloop.OnGameStartAction += ChangeClient;
-        gameloop.OnColateralEffectAction += ClientColateral;
-        //gameloop.OnChangeClientAction += ChangeClient;
+        gameloop.OnChangeClientAction += ChangeClient;
+
+        random = new System.Random();
+    }
+
+    private void Start()
+    {
+        currentImage.enabled = false;
+        balao.enabled = false;
+        balaoFrase.enabled = false;
     }
 
     enum Casos
@@ -110,8 +128,7 @@ public class Client : MonoBehaviour
                 break;
         }
 
-        currentFrases = frases;
-    }
+        currentFrases = frases;    }
 
     private void AssetInitialize()
     {
@@ -139,46 +156,77 @@ public class Client : MonoBehaviour
         if (clientsLeft.Count > 0)
         {
             currentIndex = RandomChoose();
+            clientsLeft.Remove(currentIndex);
             currentImage.sprite = avatarArray[currentIndex];
             GetClientInfo(currentIndex);
             currentText.text = currentFrases[0];
             Debug.Log(clientsLeft.Count);
         }
-    }
+        StartCoroutine(ClientLoaded());
 
-    private void ClientColateral()
-    {
-        Debug.Log("Client Colateral");
-        currentImage.sprite = colateralArray[currentIndex, chosenMedicine - 1];
-        GetClientInfo(currentIndex);
-        currentText.text = currentFrases[chosenMedicine];
-        clientsLeft.Remove(currentIndex);
-        OnClientEndAction();
     }
 
     private int RandomChoose()
     {
-        int randIndex = UnityEngine.Random.Range(0, 101) % clientsLeft.Count;
-
-        return randIndex;
+        int randomIndex = random.Next(clientsLeft.Count);
+        int clientChosen = clientsLeft[randomIndex];
+        return clientChosen;
     }
 
     public void SetMedicine1()
     {
         chosenMedicine = 1;
-        OnMedicineChosenAction();
+        StartCoroutine(ColateralRoutine());
     }
 
     public void SetMedicine2()
     {
         chosenMedicine = 2;
-        OnMedicineChosenAction();
+        StartCoroutine(ColateralRoutine());
     }
 
     public void SetMedicine3()
     {
         chosenMedicine = 3;
+        StartCoroutine(ColateralRoutine());
+    }
+
+    private void ClientCheck()
+    {
+        if (clientsLeft.Count > 0)
+        {
+            OnClientEndAction();
+        }
+        else OnClientEmptyAction();
+    }
+
+    IEnumerator ClientLoaded()
+    {
+        yield return new WaitForSeconds(2.0f);
+        currentImage.enabled = true;
+        yield return new WaitForSeconds(1.0f);
+        balao.enabled = true;
+        balaoFrase.enabled = true;
+        yield return new WaitForSeconds(1.0f);
+        instructions.text = "Escolha o remédio apropriado: ";
+        OnClientLoaded();
+    }
+
+    IEnumerator ColateralRoutine()
+    {
         OnMedicineChosenAction();
+        currentImage.enabled = false;
+        balao.enabled = false;
+        balaoFrase.enabled = false;
+        yield return new WaitForSeconds(2.0f);
+        currentImage.sprite = colateralArray[currentIndex, chosenMedicine - 1];
+        GetClientInfo(currentIndex);
+        currentText.text = currentFrases[chosenMedicine];
+        currentImage.enabled = true;
+        balao.enabled = true;
+        balaoFrase.enabled = true;
+        yield return new WaitForSeconds(3.0f);
+        ClientCheck();
     }
 
 }

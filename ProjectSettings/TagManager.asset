@@ -8,6 +8,11 @@ TagManager:
   - Cliente
   - GameManager
   - Medicine
+  - Med1
+  - Med2
+  - Med3
+  - Balao
+  - Instructions
   layers:
   - Default
   - TransparentFX
