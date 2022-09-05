@@ -9,7 +9,10 @@ using UnityEngine.Events;
 public class GameLoop : MonoBehaviour
 {
     [SerializeField]
-    private int reputacao;
+    private int reputation;
+
+    [SerializeField]
+    private GameObject[] stars;
 
     [SerializeField]
     private Client client;
@@ -39,11 +42,15 @@ public class GameLoop : MonoBehaviour
         {
             button.gameObject.SetActive(false);
         }
+
+        stars = GameObject.FindGameObjectsWithTag("Star");
     }
 
 
     private void Start()
     {
+        reputation = 5;
+        ReputationUpdate();
         StartCoroutine(Intro());
     }
 
@@ -101,13 +108,39 @@ public class GameLoop : MonoBehaviour
     IEnumerator ClientChange()
     {
         yield return new WaitForSeconds(2.0f);
+        ReputationUpdate();
         OnChangeClientAction();
     }
 
     IEnumerator WaitEnd()
     {
-        yield return new WaitForSeconds(4.0f);
+        yield return new WaitForSeconds(3.0f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void SetReputation(int delta)
+    {
+        reputation += delta;
+        if(reputation < 1)
+        {
+            reputation = 0;
+        }
+        else if(reputation > 10)
+        {
+            reputation = 10;
+        }
+    }
+
+    private void ReputationUpdate()
+    {
+        for (int i = 0; i < stars.Length; i++)
+        {
+            if (i < reputation)
+            {
+                stars[i].GetComponent<Image>().enabled = true;
+            }
+            else stars[i].GetComponent<Image>().enabled = false;
+        }
     }
 
 }

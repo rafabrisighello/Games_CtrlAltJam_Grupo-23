@@ -39,6 +39,7 @@ public class Client : MonoBehaviour
 
     [SerializeField]
     private int chosenMedicine;
+    private int[] currentResults;
 
     [SerializeField]
     private GameLoop gameloop;
@@ -97,38 +98,53 @@ public class Client : MonoBehaviour
     public void GetClientInfo(int index)
     {
         string[] frases = new string[4];
+        int[] deltaReputation = new int[3];
 
         switch (index)
         {
             case 0:
                 frases[0] = "Preciso de um remédio para resfriado!";
                 frases[1] = "Tive uma diarréia fortíssima!";
+                deltaReputation[0] = -2;
                 frases[2] = "Estou me sentindo muito fraco! ARRGH";
+                deltaReputation[1] = -3;
                 frases[3] = "Não paro de suar, mas isso está atraindo mais olhares ";
+                deltaReputation[2] = 4;
                 break;
 
             case 1:
                 frases[0] = "Preciso de um remédio para resfriado!";
                 frases[1] = "Tive uma diarréia fortíssima!";
+                deltaReputation[0] = -2;
                 frases[2] = "Estou me sentindo muito fraco! ARRGH";
+                deltaReputation[1] = -3;
                 frases[3] = "Não paro de suar, mas isso está atraindo mais olhares ";
+                deltaReputation[2] = 4;
                 break;
 
             case 2:
                 frases[0] = "Preciso de um remédio para resfriado!";
                 frases[1] = "Tive uma diarréia fortíssima!";
+                deltaReputation[0] = -2;
                 frases[2] = "Estou me sentindo muito fraco! ARRGH";
+                deltaReputation[1] = -3;
                 frases[3] = "Não paro de suar, mas isso está atraindo mais olhares ";
+                deltaReputation[2] = 4;
                 break;
             case 3:
                 frases[0] = "Preciso de um remédio para resfriado!";
                 frases[1] = "Tive uma diarréia fortíssima!";
+                deltaReputation[0] = -2;
                 frases[2] = "Estou me sentindo muito fraco! ARRGH";
+                deltaReputation[1] = -3;
                 frases[3] = "Não paro de suar, mas isso está atraindo mais olhares ";
+                deltaReputation[2] = 4;
                 break;
         }
 
-        currentFrases = frases;    }
+        currentFrases = frases;
+        currentResults = deltaReputation;
+    }
 
     private void AssetInitialize()
     {
@@ -176,19 +192,19 @@ public class Client : MonoBehaviour
     public void SetMedicine1()
     {
         chosenMedicine = 1;
-        StartCoroutine(ColateralRoutine());
+        StartCoroutine(ColateralRoutine(0));
     }
 
     public void SetMedicine2()
     {
         chosenMedicine = 2;
-        StartCoroutine(ColateralRoutine());
+        StartCoroutine(ColateralRoutine(1));
     }
 
     public void SetMedicine3()
     {
         chosenMedicine = 3;
-        StartCoroutine(ColateralRoutine());
+        StartCoroutine(ColateralRoutine(2));
     }
 
     private void ClientCheck()
@@ -207,12 +223,12 @@ public class Client : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         balao.enabled = true;
         balaoFrase.enabled = true;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
         instructions.text = "Escolha o remédio apropriado: ";
         OnClientLoaded();
     }
 
-    IEnumerator ColateralRoutine()
+    IEnumerator ColateralRoutine(int choice)
     {
         OnMedicineChosenAction();
         currentImage.enabled = false;
@@ -226,6 +242,8 @@ public class Client : MonoBehaviour
         balao.enabled = true;
         balaoFrase.enabled = true;
         yield return new WaitForSeconds(3.0f);
+        gameloop.SetReputation(currentResults[choice]);
+        yield return new WaitForSeconds(2.0f);
         ClientCheck();
     }
 
