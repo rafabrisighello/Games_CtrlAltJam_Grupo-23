@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using TMPro;
 using UnityEngine.UI;
 using System;
@@ -14,10 +15,13 @@ public class Client : MonoBehaviour
     private Sprite[] avatarArray;
 
     [SerializeField]
+    private Sprite[,] colateralArray;
+
+    [SerializeField]
     private string[] frases;
 
     [SerializeField]
-    private ArrayList clientsLeft = new ArrayList();
+    public ArrayList clientsLeft = new ArrayList();
 
     [SerializeField]
     private int currentIndex;
@@ -30,24 +34,38 @@ public class Client : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI currentText;
 
+    [SerializeField]
+    private int chosenMedicine;
 
-    private ArrayList randomIndexes = new ArrayList();
+    [SerializeField]
+    private GameLoop gameloop;
 
-    // Eventos
-    public event Action OnClientReady;
+    public event Action OnMedicineChosenAction;
+    public event Action OnClientEndAction;
 
 
-    private void Start()
+    private void Awake()
     {
-        foreach(int index in clientIndexes)
+        foreach (int index in clientIndexes)
         {
             clientsLeft.Add(index);
-            
         }
+
+        Debug.Log(clientsLeft.Count);
+
         currentImage = GetComponent<Image>();
         currentText = GameObject.FindWithTag("Frase").GetComponent<TextMeshProUGUI>();
-        currentFrases = new string[4]{"","","",""};
-        ChangeClient();
+        currentFrases = new string[4] { "", "", "", "" };
+        colateralArray = new Sprite[4,3];
+        AssetInitialize();
+    }
+
+    private void OnEnable()
+    {
+        gameloop = GameObject.FindWithTag("GameManager").GetComponent<GameLoop>();
+        gameloop.OnGameStartAction += ChangeClient;
+        gameloop.OnColateralEffectAction += ClientColateral;
+        //gameloop.OnChangeClientAction += ChangeClient;
     }
 
     enum Casos
@@ -95,33 +113,72 @@ public class Client : MonoBehaviour
         currentFrases = frases;
     }
 
-    private void ChangeClient()
+    private void AssetInitialize()
     {
+        colateralArray[0,0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/player-hurt-1.png", typeof(Sprite));
+        colateralArray[0,1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/player-crouch-1.png", typeof(Sprite));
+        colateralArray[0,2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/player-jump-1.png", typeof(Sprite));
+
+        colateralArray[1,0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/eagle-attack-2.png", typeof(Sprite));
+        colateralArray[1,1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/eagle-attack-3.png", typeof(Sprite));
+        colateralArray[1,2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/eagle-attack-4.png", typeof(Sprite));
+
+        colateralArray[2,0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/frog-idle-2.png", typeof(Sprite));
+        colateralArray[2,1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/frog-idle-3.png", typeof(Sprite));
+        colateralArray[2,2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/frog-jump-1.png", typeof(Sprite));
+
+        colateralArray[3,0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-3.png", typeof(Sprite));
+        colateralArray[3,1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-4.png", typeof(Sprite));
+        colateralArray[3,2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-6.png", typeof(Sprite));
+
+    }
+
+    public void ChangeClient()
+    {
+        Debug.Log("Change Client");
         if (clientsLeft.Count > 0)
         {
-            currentIndex = RandomChoose(clientsLeft);
-            SetAvatarImage();
+            currentIndex = RandomChoose();
+            currentImage.sprite = avatarArray[currentIndex];
             GetClientInfo(currentIndex);
-            SetAvatarText();
-            clientsLeft.Remove(currentIndex);
+            currentText.text = currentFrases[0];
+            Debug.Log(clientsLeft.Count);
         }
     }
 
-    private int RandomChoose(ArrayList clientsLeft)
+    private void ClientColateral()
     {
-        int randIndex = UnityEngine.Random.Range(0, 100 * clientsLeft.Count) % clientsLeft.Count;
+        Debug.Log("Client Colateral");
+        currentImage.sprite = colateralArray[currentIndex, chosenMedicine - 1];
+        GetClientInfo(currentIndex);
+        currentText.text = currentFrases[chosenMedicine];
+        clientsLeft.Remove(currentIndex);
+        OnClientEndAction();
+    }
+
+    private int RandomChoose()
+    {
+        int randIndex = UnityEngine.Random.Range(0, 101) % clientsLeft.Count;
 
         return randIndex;
     }
 
-    private void SetAvatarImage()
+    public void SetMedicine1()
     {
-        currentImage.sprite = avatarArray[currentIndex];
+        chosenMedicine = 1;
+        OnMedicineChosenAction();
     }
 
-    private void SetAvatarText()
+    public void SetMedicine2()
     {
-        currentText.text = currentFrases[0];
+        chosenMedicine = 2;
+        OnMedicineChosenAction();
+    }
+
+    public void SetMedicine3()
+    {
+        chosenMedicine = 3;
+        OnMedicineChosenAction();
     }
 
 }

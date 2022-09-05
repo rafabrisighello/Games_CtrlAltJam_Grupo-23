@@ -3,30 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.Events;
 
 public class GameLoop : MonoBehaviour
 {
     [SerializeField]
     private int reputacao;
-    private int ClientIndex { get; set; }
 
-    public event Action OnGameStart;
+    [SerializeField]
+    private Client client;
+
+    // Eventos
+    public event Action OnGameStartAction;
+    public event Action OnChangeClientAction;
+    public event Action OnColateralEffectAction;
+    public event Action OnClientEmptyAction;
 
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
     }
 
+    private void OnEnable()
+    {
+        client = GameObject.FindWithTag("Cliente").GetComponent<Client>();
+        client.OnMedicineChosenAction += ColateralEffect;
+        client.OnClientEndAction += ChangeClient;
+    }
+
+
     private void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            if(OnGameStart != null)
-            {
-                OnGameStart();
-            }
-
-        }
-
+        OnGameStartAction();
     }
+
+    private void ColateralEffect()
+    {
+        OnColateralEffectAction();
+    }
+
+    private void ChangeClient()
+    {
+        //OnChangeClientAction();
+    }
+
 }
