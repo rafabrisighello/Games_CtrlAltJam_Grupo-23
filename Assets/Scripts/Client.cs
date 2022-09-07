@@ -29,7 +29,6 @@ public class Client : MonoBehaviour
     private Image currentImage;
     private Image balao;
     private TextMeshProUGUI balaoFrase;
-    private TextMeshProUGUI instructions;
 
     [SerializeField]
     private string[] currentFrases;
@@ -38,7 +37,6 @@ public class Client : MonoBehaviour
     private TextMeshProUGUI currentText;
 
     [SerializeField]
-    private int chosenMedicine;
     private int[] currentResults;
 
     [SerializeField]
@@ -47,7 +45,6 @@ public class Client : MonoBehaviour
     private System.Random random;
 
     public event Action OnClientLoaded;
-    public event Action OnMedicineChosenAction;
     public event Action OnClientEndAction;
     public event Action OnClientEmptyAction;
 
@@ -64,7 +61,6 @@ public class Client : MonoBehaviour
         currentImage = GetComponent<Image>();
         balao = GameObject.FindWithTag("Balao").GetComponent<Image>();
         balaoFrase = balao.GetComponentInChildren<TextMeshProUGUI>();
-        instructions = GameObject.FindWithTag("Instructions").GetComponent<TextMeshProUGUI>();
         currentText = GameObject.FindWithTag("Frase").GetComponent<TextMeshProUGUI>();
         currentFrases = new string[4] { "", "", "", "" };
         colateralArray = new Sprite[4,3];
@@ -75,6 +71,7 @@ public class Client : MonoBehaviour
     {
         gameloop = GameObject.FindWithTag("GameManager").GetComponent<GameLoop>();
         gameloop.OnGameStartAction += ChangeClient;
+        gameloop.OnMedAppliedAction += Colateral;
         gameloop.OnChangeClientAction += ChangeClient;
 
         random = new System.Random();
@@ -189,22 +186,11 @@ public class Client : MonoBehaviour
         return clientChosen;
     }
 
-    public void SetMedicine1()
-    {
-        chosenMedicine = 1;
-        StartCoroutine(ColateralRoutine(0));
-    }
 
-    public void SetMedicine2()
+    private void Colateral()
     {
-        chosenMedicine = 2;
-        StartCoroutine(ColateralRoutine(1));
-    }
-
-    public void SetMedicine3()
-    {
-        chosenMedicine = 3;
-        StartCoroutine(ColateralRoutine(2));
+        int choice = GameObject.FindWithTag("Medicine").GetComponentInChildren<Medicine>().GetMed();
+        StartCoroutine(ColateralRoutine(choice));
     }
 
     private void ClientCheck()
@@ -223,21 +209,19 @@ public class Client : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         balao.enabled = true;
         balaoFrase.enabled = true;
-        yield return new WaitForSeconds(2.0f);
-        instructions.text = "Escolha o remédio apropriado: ";
+        yield return new WaitForSeconds(1.0f);
         OnClientLoaded();
     }
 
     IEnumerator ColateralRoutine(int choice)
     {
-        OnMedicineChosenAction();
         currentImage.enabled = false;
         balao.enabled = false;
         balaoFrase.enabled = false;
         yield return new WaitForSeconds(2.0f);
-        currentImage.sprite = colateralArray[currentIndex, chosenMedicine - 1];
+        currentImage.sprite = colateralArray[currentIndex, choice];
         GetClientInfo(currentIndex);
-        currentText.text = currentFrases[chosenMedicine];
+        currentText.text = currentFrases[choice + 1];
         currentImage.enabled = true;
         balao.enabled = true;
         balaoFrase.enabled = true;

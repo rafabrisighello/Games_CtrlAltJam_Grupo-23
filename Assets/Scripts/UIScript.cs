@@ -24,9 +24,19 @@ public class UIScript : MonoBehaviour
         }
     }
 
-    public void NextScreen()
+    public void PlayScreen()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(3);
+    }
+
+    public void InfoScreen()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void OptionScreen()
+    {
+        SceneManager.LoadScene(2);
     }
 
     public void StartScreen()
