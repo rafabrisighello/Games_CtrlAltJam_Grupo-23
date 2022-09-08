@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 public class GameLoop : MonoBehaviour
 {
@@ -22,18 +21,13 @@ public class GameLoop : MonoBehaviour
     [SerializeField]
     private Medicine medicine;
 
-
-    // Botões para escolha de Remédios - Array de referências
-    [SerializeField]
-    private Button[] medButtons;
-
     // Referência ao botão para prosseguir no jogo
     [SerializeField]
     private GameObject proceedButton;
 
-    // Referência ao botão para confirmar a escolha do remédio
+    // Referência ao botão para aplicar o remédio
     [SerializeField]
-    private GameObject ackButton;
+    private GameObject applyButton;
 
     // Eventos
     public event Action OnGameStartAction; // Início do jogo
@@ -49,38 +43,32 @@ public class GameLoop : MonoBehaviour
 
     private void OnEnable()
     {
-        proceedButton.SetActive(false);
-        ackButton.SetActive(false);
+        proceedButton.GetComponent<Button>().enabled = false;
+        proceedButton.GetComponent<Image>().enabled = false;
+        applyButton.GetComponent<Button>().enabled = false;
+        applyButton.GetComponent<Image>().enabled = false;
 
         // Subscrição dos métodos aos eventos do cliente
-        client.OnClientLoaded += EnableProceed;
         client.OnClientEmptyAction += FinalResults;
-        client.OnClientEndAction += ClientSwap;
+        client.OnClientEndAction += EnableProceed;
 
         // Subscrição dos métodos aos eventos do Remédio
-        medicine.OnMedChosenAction += EnableAckButton;
-
-        MedHide();
+        medicine.OnMedChosenAction += EnableApplyButton;
     }
 
 
     private void Start()
     {
-        reputation = 5;
+        reputation = 0;
         StartCoroutine(Intro());
     }
 
     private void EnableProceed()
     {
-        proceedButton.SetActive(true);
+        StartCoroutine(Proceed());
     }
 
-    public void Proceed()
-    {
-        StartCoroutine(MedDisplay());
-    }
-
-    private void ClientSwap()
+    public void ClientSwap()
     {
         StartCoroutine(ClientChange());
     }
@@ -90,37 +78,15 @@ public class GameLoop : MonoBehaviour
         StartCoroutine(WaitEnd());
     }
 
-    private void EnableAckButton()
+    private void EnableApplyButton()
     {
-        StartCoroutine(AckButton());
+        StartCoroutine(ApplyButton());
     }
 
     IEnumerator Intro()
     {
         yield return new WaitForSeconds(1.0f);
         OnGameStartAction();
-    }
-
-    IEnumerator MedDisplay()
-    {
-        yield return new WaitForSeconds(1.0f);
-        medButtons[0].gameObject.SetActive(true);
-        medButtons[0].GetComponent<Button>().enabled = false;
-        yield return new WaitForSeconds(1.0f);
-        medButtons[1].gameObject.SetActive(true);
-        medButtons[1].GetComponent<Button>().enabled = false;
-        yield return new WaitForSeconds(1.0f);
-        medButtons[2].gameObject.SetActive(true);
-        medButtons[0].GetComponent<Button>().enabled = true;
-        medButtons[1].GetComponent<Button>().enabled = true;
-    }
-
-    private void MedHide()
-    {
-        foreach (Button button in medButtons)
-        {
-            button.gameObject.SetActive(false);
-        }
     }
 
     IEnumerator ClientChange()
@@ -132,44 +98,37 @@ public class GameLoop : MonoBehaviour
     IEnumerator WaitEnd()
     {
         yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(4);
     }
 
-    IEnumerator AckButton()
+    IEnumerator ApplyButton()
     {
         yield return new WaitForSeconds(0.5f);
-        ackButton.SetActive(true);
+        applyButton.SetActive(true);
+        applyButton.GetComponent<Button>().enabled = true;
+        applyButton.GetComponent<Image>().enabled = true;
+    }
+
+    IEnumerator Proceed()
+    {
+        yield return new WaitForSeconds(3.0f);
+        proceedButton.SetActive(true);
+        proceedButton.GetComponent<Button>().enabled = true;
+        proceedButton.GetComponent<Image>().enabled = true;
+    }
+
+    public void MedChoice()
+    {
+        OnMedAppliedAction();
     }
 
     public void SetReputation(int delta)
     {
         reputation += delta;
-        if(reputation < 1)
-        {
-            reputation = 0;
-        }
-        else if(reputation > 10)
-        {
-            reputation = 10;
-        }
     }
 
-    private void ReputationUpdate()
+    public int GetReputation()
     {
-        for (int i = 0; i < stars.Length; i++)
-        {
-            if (i < reputation)
-            {
-                stars[i].GetComponent<Image>().enabled = true;
-            }
-            else stars[i].GetComponent<Image>().enabled = false;
-        }
+        return reputation;
     }
-
-    public void MedChoice()
-    {
-        MedHide();
-        OnMedAppliedAction();
-    }
-
 }

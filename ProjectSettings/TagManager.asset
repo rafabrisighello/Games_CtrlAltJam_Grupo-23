@@ -11,10 +11,17 @@ TagManager:
   - Med1
   - Med2
   - Med3
-  - Balao
   - Instructions
   - Star
   - PanelCliente
+  - TextBox
+  - ImageBox
+  - Balao
+  - Button
+  - PlayButton
+  - InfoButton
+  - OptionsButton
+  - BackButton
   layers:
   - Default
   - TransparentFX

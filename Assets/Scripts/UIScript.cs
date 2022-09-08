@@ -8,6 +8,12 @@ public class UIScript : MonoBehaviour
     [SerializeField]
     private GameObject gameManager;
 
+    [SerializeField]
+    private int currentSceneIndex;
+
+    [SerializeField]
+    private int previousSceneIndex;
+
     private void Awake()
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
@@ -43,8 +49,24 @@ public class UIScript : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void GoBack()
+    {
+        SceneManager.LoadScene(previousSceneIndex);
+    }
+
     public void Quit()
     {
         Application.Quit();
+    }
+
+    private void GetPreviousSceneIndex()
+    {
+        previousSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    }
+
+    private void UpdateSceneIndex()
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 }
