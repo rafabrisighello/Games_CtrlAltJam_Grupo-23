@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SFXManager : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class SFXManager : MonoBehaviour
 
     [SerializeField]
     private List<Button> buttons = new List<Button>();
+
+    [SerializeField]
+    private GameLoop gameloop;
+
+    [SerializeField]
+    private Client client;
 
     private static SFXManager sfxManagerInstance = null;
 
@@ -32,12 +39,24 @@ public class SFXManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
     }
 
     private void OnLevelWasLoaded(int level)
     {
         UpdateListeners();
+
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            gameloop = GameObject.FindWithTag("GameManager").GetComponent<GameLoop>();
+            gameloop.OnChangeClientAction += delegate { PlayEffect(GetSFXIndex("")); };
+            gameloop.OnColateralEffectAction += delegate { PlayEffect(GetSFXIndex("")); };
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            client = GameObject.FindWithTag("Cliente").GetComponent<Client>();
+            client.OnClientLoaded += delegate { PlayEffect(GetSFXIndex("")); };
+        }
     }
 
     public void PlayEffect(int sfxIndex)

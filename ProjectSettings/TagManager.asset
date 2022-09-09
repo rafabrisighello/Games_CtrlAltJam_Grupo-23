@@ -22,6 +22,8 @@ TagManager:
   - InfoButton
   - OptionsButton
   - BackButton
+  - AudioManager
+  - SFXManager
   layers:
   - Default
   - TransparentFX

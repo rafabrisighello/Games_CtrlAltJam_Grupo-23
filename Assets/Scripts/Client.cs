@@ -1,9 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
-using TMPro;
-using UnityEngine.UI;
 using System;
 
 public class Client : MonoBehaviour
@@ -44,6 +41,9 @@ public class Client : MonoBehaviour
 
     [SerializeField]
     private GameLoop gameloop;
+
+    [SerializeField]
+    private Sprite[] assetArray;
 
     private System.Random random;
 
@@ -247,41 +247,41 @@ public class Client : MonoBehaviour
 
     private void AssetInitialize()
     {
-        colateralArray[0, 0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/player-hurt-1.png", typeof(Sprite));
-        colateralArray[0, 1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/player-crouch-1.png", typeof(Sprite));
-        colateralArray[0, 2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/player-jump-1.png", typeof(Sprite));
+        colateralArray[0, 0] = assetArray[1];
+        colateralArray[0, 1] = assetArray[2];
+        colateralArray[0, 2] = assetArray[3];
 
-        colateralArray[1, 0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/eagle-attack-2.png", typeof(Sprite));
-        colateralArray[1, 1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/eagle-attack-3.png", typeof(Sprite));
-        colateralArray[1, 2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/eagle-attack-4.png", typeof(Sprite));
+        colateralArray[1, 0] = assetArray[5];
+        colateralArray[1, 1] = assetArray[6];
+        colateralArray[1, 2] = assetArray[7];
 
-        colateralArray[2, 0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/frog-idle-2.png", typeof(Sprite));
-        colateralArray[2, 1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/frog-idle-3.png", typeof(Sprite));
-        colateralArray[2, 2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/frog-jump-1.png", typeof(Sprite));
+        colateralArray[2, 0] = assetArray[9];
+        colateralArray[2, 1] = assetArray[10];
+        colateralArray[2, 2] = assetArray[11];
 
-        colateralArray[3, 0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-3.png", typeof(Sprite));
-        colateralArray[3, 1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-4.png", typeof(Sprite));
-        colateralArray[3, 2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-6.png", typeof(Sprite));
+        colateralArray[3, 0] = assetArray[13];
+        colateralArray[3, 1] = assetArray[14];
+        colateralArray[3, 2] = assetArray[15];
 
-        colateralArray[4, 0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/player-hurt-1.png", typeof(Sprite));
-        colateralArray[4, 1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/player-crouch-1.png", typeof(Sprite));
-        colateralArray[4, 2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/player-jump-1.png", typeof(Sprite));
+        colateralArray[4, 0] = assetArray[17];
+        colateralArray[4, 1] = assetArray[18];
+        colateralArray[4, 2] = assetArray[19];
 
-        colateralArray[5, 0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/eagle-attack-2.png", typeof(Sprite));
-        colateralArray[5, 1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/eagle-attack-3.png", typeof(Sprite));
-        colateralArray[5, 2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/eagle-attack-4.png", typeof(Sprite));
+        colateralArray[5, 0] = assetArray[21];
+        colateralArray[5, 1] = assetArray[22];
+        colateralArray[5, 2] = assetArray[23];
 
-        colateralArray[6, 0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/frog-idle-2.png", typeof(Sprite));
-        colateralArray[6, 1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/frog-idle-3.png", typeof(Sprite));
-        colateralArray[6, 2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/frog-jump-1.png", typeof(Sprite));
+        colateralArray[6, 0] = assetArray[25];
+        colateralArray[6, 1] = assetArray[26];
+        colateralArray[6, 2] = assetArray[27];
 
-        colateralArray[7, 0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-3.png", typeof(Sprite));
-        colateralArray[7, 1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-4.png", typeof(Sprite));
-        colateralArray[7, 2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-6.png", typeof(Sprite));
+        colateralArray[7, 0] = assetArray[29];
+        colateralArray[7, 1] = assetArray[30];
+        colateralArray[7, 2] = assetArray[31];
 
-        colateralArray[8, 0] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-3.png", typeof(Sprite));
-        colateralArray[8, 1] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-4.png", typeof(Sprite));
-        colateralArray[8, 2] = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Art/Clients/opossum-6.png", typeof(Sprite));
+        colateralArray[8, 0] = assetArray[33];
+        colateralArray[8, 1] = assetArray[34];
+        colateralArray[8, 2] = assetArray[35];
     }
 
 }

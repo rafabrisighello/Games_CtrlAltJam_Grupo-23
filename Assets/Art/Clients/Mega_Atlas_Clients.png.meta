@@ -1,0 +1,979 @@
+fileFormatVersion: 2
+guid: d450af95886a2b348a139f13831a5e5d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8302916249874792917
+    second: Mega_Atlas_Clients_0
+  - first:
+      213: -6998829889676241073
+    second: Mega_Atlas_Clients_1
+  - first:
+      213: -1950225405580355931
+    second: Mega_Atlas_Clients_2
+  - first:
+      213: -6031734273736362406
+    second: Mega_Atlas_Clients_3
+  - first:
+      213: 4718596570227599759
+    second: Mega_Atlas_Clients_4
+  - first:
+      213: -1595546342368351009
+    second: Mega_Atlas_Clients_5
+  - first:
+      213: -7285377872919132447
+    second: Mega_Atlas_Clients_6
+  - first:
+      213: -2666743287259203045
+    second: Mega_Atlas_Clients_7
+  - first:
+      213: 5650418705829413261
+    second: Mega_Atlas_Clients_8
+  - first:
+      213: -5402585916882833223
+    second: Mega_Atlas_Clients_9
+  - first:
+      213: 1230796231299234190
+    second: Mega_Atlas_Clients_10
+  - first:
+      213: -2855901476719846435
+    second: Mega_Atlas_Clients_11
+  - first:
+      213: -1842404679892951731
+    second: Mega_Atlas_Clients_12
+  - first:
+      213: -5129631240539358862
+    second: Mega_Atlas_Clients_13
+  - first:
+      213: 4600886758329354702
+    second: Mega_Atlas_Clients_14
+  - first:
+      213: -4633443850125297085
+    second: Mega_Atlas_Clients_15
+  - first:
+      213: 207423974691481471
+    second: Mega_Atlas_Clients_16
+  - first:
+      213: 6423707837442363513
+    second: Mega_Atlas_Clients_17
+  - first:
+      213: 6978567223374159483
+    second: Mega_Atlas_Clients_18
+  - first:
+      213: 959745405747975821
+    second: Mega_Atlas_Clients_19
+  - first:
+      213: 8821309190530256897
+    second: Mega_Atlas_Clients_20
+  - first:
+      213: 1143438764197008844
+    second: Mega_Atlas_Clients_21
+  - first:
+      213: 1561342363728468377
+    second: Mega_Atlas_Clients_22
+  - first:
+      213: 6073130416038930758
+    second: Mega_Atlas_Clients_23
+  - first:
+      213: -5802718937616617426
+    second: Mega_Atlas_Clients_24
+  - first:
+      213: 82778850325736531
+    second: Mega_Atlas_Clients_25
+  - first:
+      213: 1127159736632155531
+    second: Mega_Atlas_Clients_26
+  - first:
+      213: -6191667565271712261
+    second: Mega_Atlas_Clients_27
+  - first:
+      213: -6110914026912346913
+    second: Mega_Atlas_Clients_28
+  - first:
+      213: -2956757680477871628
+    second: Mega_Atlas_Clients_29
+  - first:
+      213: -8021007325787883275
+    second: Mega_Atlas_Clients_30
+  - first:
+      213: -6125910314830491234
+    second: Mega_Atlas_Clients_31
+  - first:
+      213: -9057465982265120484
+    second: Mega_Atlas_Clients_32
+  - first:
+      213: 446188762782273613
+    second: Mega_Atlas_Clients_33
+  - first:
+      213: -8870271568131177477
+    second: Mega_Atlas_Clients_34
+  - first:
+      213: 3674242886956337576
+    second: Mega_Atlas_Clients_35
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1027
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4b4369ee1c2a344a9eaf62f8e1a14c
+      internalID: -8302916249874792917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1027
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0db95e6c15dec47aace1e6c8941767
+      internalID: -6998829889676241073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_2
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1027
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2633b15615bd0634187ba7d1d4cd0662
+      internalID: -1950225405580355931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_3
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1027
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d4495f3879f60458c0f577f43ab173
+      internalID: -6031734273736362406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 899
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5550d64d7eb0443a172e1146622ace
+      internalID: 4718596570227599759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 899
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cc8b0e23c8d3e4798fda658f88f8c0
+      internalID: -1595546342368351009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_6
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 899
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7f325e7567c9f4c96c310a4d22a37e
+      internalID: -7285377872919132447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_7
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 899
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33ccf2c3626b7d47b5301e58d86c218
+      internalID: -2666743287259203045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 771
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d32f9aa51d640489aedf23b44d3189
+      internalID: 5650418705829413261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_9
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 771
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fab5de27e933a14b981cd5e5a3d2bcf
+      internalID: -5402585916882833223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_10
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 771
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3439f8ab00e17074aa23420610f12d22
+      internalID: 1230796231299234190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_11
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 771
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984bfdb13af25e24fa791d8e6bd6954b
+      internalID: -2855901476719846435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 643
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4456783f99aeb2418452cac504b9f5c
+      internalID: -1842404679892951731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_13
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 643
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a204ab96ea32724fb743aa1fbe3d644
+      internalID: -5129631240539358862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_14
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 643
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033fe78bca25a1c44ad4de9e530e999c
+      internalID: 4600886758329354702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_15
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 643
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3546fe1c58bf443bb21167805553d4
+      internalID: -4633443850125297085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 515
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00414993db026314aa50ff6bea70f7de
+      internalID: 207423974691481471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_17
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 515
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65dd3a98d25a45e4182b38169af64835
+      internalID: 6423707837442363513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_18
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 515
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d83853ae6d80944a15cb42ccddd693
+      internalID: 6978567223374159483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_19
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 515
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1319dc60f6715f641bcbd2eea3c7e588
+      internalID: 959745405747975821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 387
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913a33df7ea8a1847bcd780cb6496013
+      internalID: 8821309190530256897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_21
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 387
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1c171ee874a1341983f8641230f458
+      internalID: 1143438764197008844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_22
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 387
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dd5046d2544864f9ee86cc8c5d03de
+      internalID: 1561342363728468377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_23
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 387
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dc0305918378249ab68c6d0b1ccee3
+      internalID: 6073130416038930758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 259
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10eeeff7da5069648a1add7e35c015d4
+      internalID: -5802718937616617426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_25
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 259
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c82e3f29d86558498eba7f812605d89
+      internalID: 82778850325736531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_26
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 259
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b79f39cbe204f947874da8c63ef0dd9
+      internalID: 1127159736632155531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_27
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 259
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7a97110ac2f6048aa91b3526c292a3
+      internalID: -6191667565271712261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_28
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 131
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3b4b8313febc048b5d504122523267
+      internalID: -6110914026912346913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_29
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 131
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1b64cc6e53fb240ad747884f9ca08f
+      internalID: -2956757680477871628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_30
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 130
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371f580567905cb46979c2111fee5da6
+      internalID: -8021007325787883275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_31
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 131
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e40597feb378142ac410821f9db114
+      internalID: -6125910314830491234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_32
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 11
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acec4c43096ad464cbed8a11a4c6e54d
+      internalID: -9057465982265120484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_33
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 9
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8b77c8030f32c4ab16db60ac4b884c
+      internalID: 446188762782273613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_34
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 9
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc091b68bd453b94da923a37e6678257
+      internalID: -8870271568131177477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega_Atlas_Clients_35
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 9
+        width: 120
+        height: 120
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53dec269a08e62c459facc7a82f136ba
+      internalID: 3674242886956337576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

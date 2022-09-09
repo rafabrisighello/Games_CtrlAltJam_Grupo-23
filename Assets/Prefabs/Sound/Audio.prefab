@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8953265050583310149}
   m_Layer: 0
   m_Name: Audio
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,8 +43,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2c60ef9f91b304c18a8c813af10a82e1, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.742
+  m_PlayOnAwake: 0
+  m_Volume: 0.596
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -140,4 +140,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb03c1151450e004b94a4d8ea414f0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songArray: []
+  songArray:
+  - {fileID: 8300000, guid: ee8f93b3c53744442b9550b3722e5cbc, type: 3}
+  - {fileID: 8300000, guid: 8202248e5ea4f4cc9a32887814f787ab, type: 3}
+  - {fileID: 8300000, guid: b596bbe52d90147caac21ab179f695d8, type: 3}
+  - {fileID: 8300000, guid: 45ffa7b4f801247368356785431064ce, type: 3}
+  - {fileID: 8300000, guid: 2c60ef9f91b304c18a8c813af10a82e1, type: 3}
+  audioSource: {fileID: 0}
+  currentsong: {fileID: 0}
+  gameloop: {fileID: 0}
