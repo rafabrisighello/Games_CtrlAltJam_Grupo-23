@@ -184,7 +184,7 @@ public class Client : MonoBehaviour
         switch (index)
         {
             case 0:
-                frases[0] = "Depois de algum tempo ali, aparece um Bodybuilder. Bodybuilder com baixa autoestima: Iae men. Ei, tô com um resfriado potente aqui, ó. Me arranja um remedinho ai, vai lá? Tenho que ir pra academia jajá, posso gripar não.";
+                frases[0] = "Depois de algum tempo ali, aparece um Bodybuilder. \nBodybuilder com baixa autoestima: Iae men. Ei, tô com um resfriado potente aqui, ó. Me arranja um remedinho ai, vai lá? Tenho que ir pra academia jajá, posso gripar não.";
                 frases[1] = "Enquanto estava na academia, ele acabou sofrendo um... episódio constrangedor por conta do efeito colateral do remédio. O vexame que passou com certeza não agradou o cliente.";
                 deltaReputation[0] = 0;
                 frases[2] = "Enquanto estava na academia, ele percebeu que não conseguia levantar o ferro direito, por mais que tentasse. A vergonha de não conseguir fazer os exercícios com certeza não agradou o cliente.";

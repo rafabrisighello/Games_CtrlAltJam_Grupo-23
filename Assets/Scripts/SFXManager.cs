@@ -18,6 +18,9 @@ public class SFXManager : MonoBehaviour
     [SerializeField]
     private Client client;
 
+    [SerializeField]
+    private AudioManager audioManager;
+
     private static SFXManager sfxManagerInstance = null;
 
     private void Awake()
@@ -41,6 +44,11 @@ public class SFXManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        audioManager = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
     private void OnLevelWasLoaded(int level)
     {
         UpdateListeners();
@@ -48,14 +56,14 @@ public class SFXManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             gameloop = GameObject.FindWithTag("GameManager").GetComponent<GameLoop>();
-            gameloop.OnChangeClientAction += delegate { PlayEffect(GetSFXIndex("")); };
-            gameloop.OnColateralEffectAction += delegate { PlayEffect(GetSFXIndex("")); };
+            gameloop.OnChangeClientAction += delegate { PlayEffect(9); };
+            gameloop.OnColateralEffectAction += delegate { PlayEffect(10); };
         }
 
         if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             client = GameObject.FindWithTag("Cliente").GetComponent<Client>();
-            client.OnClientLoaded += delegate { PlayEffect(GetSFXIndex("")); };
+            client.OnClientLoaded += delegate { PlayEffect(11); };
         }
     }
 
@@ -88,6 +96,15 @@ public class SFXManager : MonoBehaviour
                 break;
             case "ApplyButton":
                 sfxIndex = 5;
+                break;
+            case "Med1":
+                sfxIndex = 6;
+                break;
+            case "Med2":
+                sfxIndex = 7;
+                break;
+            case "Med3":
+                sfxIndex = 8;
                 break;
             default:
                 sfxIndex = 0;

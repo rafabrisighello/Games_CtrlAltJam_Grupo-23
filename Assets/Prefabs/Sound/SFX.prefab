@@ -147,6 +147,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6362dc82c01266f4099527e462c7538b, type: 3}
   - {fileID: 8300000, guid: 2a4aaac7e3d8dc84facd026a69574973, type: 3}
   - {fileID: 8300000, guid: 9d255dbf95218104a87ea1459a9c60aa, type: 3}
+  - {fileID: 8300000, guid: 0b089b225b9095444afd110f536faa69, type: 3}
+  - {fileID: 8300000, guid: a9041f15a000b7748bc04d401019aa86, type: 3}
+  - {fileID: 8300000, guid: e561c9f0cfea72e4db68ca897eb8bf2c, type: 3}
+  - {fileID: 8300000, guid: 9d255dbf95218104a87ea1459a9c60aa, type: 3}
+  - {fileID: 8300000, guid: 9d255dbf95218104a87ea1459a9c60aa, type: 3}
+  - {fileID: 8300000, guid: 9d255dbf95218104a87ea1459a9c60aa, type: 3}
   buttons: []
   gameloop: {fileID: 0}
   client: {fileID: 0}
+  audioManager: {fileID: 0}
