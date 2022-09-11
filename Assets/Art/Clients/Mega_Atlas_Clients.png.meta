@@ -139,7 +139,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -209,10 +209,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1027
-        width: 120
-        height: 120
+        x: 18
+        y: 1040
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,10 +230,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_1
       rect:
         serializedVersion: 2
-        x: 133
-        y: 1027
-        width: 120
-        height: 120
+        x: 148
+        y: 1040
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,10 +251,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_2
       rect:
         serializedVersion: 2
-        x: 261
-        y: 1027
-        width: 120
-        height: 120
+        x: 274
+        y: 1040
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +272,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_3
       rect:
         serializedVersion: 2
-        x: 389
-        y: 1027
-        width: 120
-        height: 120
+        x: 403
+        y: 1040
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_4
       rect:
         serializedVersion: 2
-        x: 5
-        y: 899
-        width: 120
-        height: 120
+        x: 18
+        y: 910
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,10 +314,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_5
       rect:
         serializedVersion: 2
-        x: 133
-        y: 899
-        width: 120
-        height: 120
+        x: 148
+        y: 910
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,10 +335,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_6
       rect:
         serializedVersion: 2
-        x: 261
-        y: 899
-        width: 120
-        height: 120
+        x: 274
+        y: 910
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,10 +356,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_7
       rect:
         serializedVersion: 2
-        x: 389
-        y: 899
-        width: 120
-        height: 120
+        x: 403
+        y: 910
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,10 +377,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_8
       rect:
         serializedVersion: 2
-        x: 5
+        x: 12
         y: 771
-        width: 120
-        height: 120
+        width: 105
+        height: 105
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,10 +398,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_9
       rect:
         serializedVersion: 2
-        x: 133
+        x: 140
         y: 771
-        width: 120
-        height: 120
+        width: 105
+        height: 105
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -419,10 +419,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_10
       rect:
         serializedVersion: 2
-        x: 261
+        x: 270
         y: 771
-        width: 120
-        height: 120
+        width: 105
+        height: 105
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,10 +440,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_11
       rect:
         serializedVersion: 2
-        x: 389
+        x: 392
         y: 771
-        width: 120
-        height: 120
+        width: 105
+        height: 105
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -461,10 +461,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_12
       rect:
         serializedVersion: 2
-        x: 5
-        y: 643
-        width: 120
-        height: 120
+        x: 14
+        y: 657
+        width: 80
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,10 +482,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_13
       rect:
         serializedVersion: 2
-        x: 133
-        y: 643
-        width: 120
-        height: 120
+        x: 140
+        y: 657
+        width: 80
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,10 +503,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_14
       rect:
         serializedVersion: 2
-        x: 261
-        y: 643
-        width: 120
-        height: 120
+        x: 270
+        y: 657
+        width: 80
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,10 +524,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_15
       rect:
         serializedVersion: 2
-        x: 389
-        y: 643
-        width: 120
-        height: 120
+        x: 400
+        y: 657
+        width: 80
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -629,10 +629,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_20
       rect:
         serializedVersion: 2
-        x: 5
-        y: 387
-        width: 120
-        height: 120
+        x: 18
+        y: 395
+        width: 90
+        height: 84
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -650,10 +650,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_21
       rect:
         serializedVersion: 2
-        x: 133
-        y: 387
-        width: 120
-        height: 120
+        x: 146
+        y: 395
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -671,10 +671,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_22
       rect:
         serializedVersion: 2
-        x: 261
-        y: 387
-        width: 120
-        height: 120
+        x: 274
+        y: 395
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -692,10 +692,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_23
       rect:
         serializedVersion: 2
-        x: 389
-        y: 387
-        width: 120
-        height: 120
+        x: 402
+        y: 395
+        width: 90
+        height: 90
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,7 +714,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 259
+        y: 264
         width: 120
         height: 120
       alignment: 1
@@ -735,7 +735,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 133
-        y: 259
+        y: 264
         width: 120
         height: 120
       alignment: 1
@@ -756,7 +756,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 261
-        y: 259
+        y: 264
         width: 120
         height: 120
       alignment: 1
@@ -797,10 +797,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_28
       rect:
         serializedVersion: 2
-        x: 5
-        y: 131
-        width: 120
-        height: 120
+        x: 12
+        y: 136
+        width: 90
+        height: 110
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -818,10 +818,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_29
       rect:
         serializedVersion: 2
-        x: 133
-        y: 131
-        width: 120
-        height: 120
+        x: 140
+        y: 136
+        width: 90
+        height: 110
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -839,10 +839,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_30
       rect:
         serializedVersion: 2
-        x: 261
-        y: 130
-        width: 120
-        height: 120
+        x: 266
+        y: 136
+        width: 90
+        height: 110
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -860,10 +860,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_31
       rect:
         serializedVersion: 2
-        x: 389
-        y: 131
-        width: 120
-        height: 120
+        x: 392
+        y: 136
+        width: 90
+        height: 110
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -881,10 +881,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_32
       rect:
         serializedVersion: 2
-        x: 5
-        y: 11
-        width: 120
-        height: 120
+        x: 136
+        y: 12
+        width: 110
+        height: 114
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -902,10 +902,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_33
       rect:
         serializedVersion: 2
-        x: 133
-        y: 9
-        width: 120
-        height: 120
+        x: 8
+        y: 12
+        width: 110
+        height: 114
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -923,10 +923,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_34
       rect:
         serializedVersion: 2
-        x: 261
-        y: 9
-        width: 120
-        height: 120
+        x: 265
+        y: 12
+        width: 110
+        height: 114
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -944,10 +944,10 @@ TextureImporter:
       name: Mega_Atlas_Clients_35
       rect:
         serializedVersion: 2
-        x: 389
-        y: 9
-        width: 120
-        height: 120
+        x: 392
+        y: 14
+        width: 110
+        height: 114
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}

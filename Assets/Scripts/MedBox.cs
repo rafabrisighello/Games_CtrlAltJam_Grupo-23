@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using TMPro;
 
 public class MedBox : MonoBehaviour
 {
@@ -48,7 +49,9 @@ public class MedBox : MonoBehaviour
         foreach (GameObject button in buttonObjectRefs)
         {
             button.GetComponent<Button>().interactable = true;
+            button.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
         }
+        buttonObjectRefs[0].GetComponent<Image>().sprite = spriteOptions[1];
     }
 
     private void DisableChoice()
@@ -56,6 +59,7 @@ public class MedBox : MonoBehaviour
         foreach (GameObject button in buttonObjectRefs)
         {
             button.GetComponent<Button>().interactable = false;
+            button.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
             button.GetComponent<Image>().sprite = spriteOptions[0];
         }
     }
