@@ -24,6 +24,7 @@ ScriptsOnlyBuild:
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -154,7 +155,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -170,6 +175,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10372}
     - Class: 114
       Script: {instanceID: 10658}
+    - Class: 114
+      Script: {instanceID: 10878}
+    - Class: 114
+      Script: {instanceID: 11084}
     - Class: 114
       Script: {instanceID: 11144}
     - Class: 114
@@ -499,7 +508,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: a5a5dbd3f3758c39e3656e1ab3af1e3f
+      Hash: 73abfb60c37eccc1b1f16c51f25edc58
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameLoop
@@ -577,7 +586,7 @@ ScriptsOnlyBuild:
     className: UIScript
   - hash:
       serializedVersion: 2
-      Hash: 456365a3671363c086123a02c58e82e1
+      Hash: abb91a6228e7ea960e35e30ec53439e1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Client
@@ -613,7 +622,7 @@ ScriptsOnlyBuild:
     className: VertexJitter
   - hash:
       serializedVersion: 2
-      Hash: a3bd713769dcd5e088dd9e14926f869c
+      Hash: de2cab18ad48548c4fe339fc2b249cb3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SFXManager
