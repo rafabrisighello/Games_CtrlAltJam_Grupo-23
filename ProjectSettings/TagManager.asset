@@ -24,6 +24,8 @@ TagManager:
   - BackButton
   - AudioManager
   - SFXManager
+  - ProceedButton
+  - ApplyButton
   layers:
   - Default
   - TransparentFX

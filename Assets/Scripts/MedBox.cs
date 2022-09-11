@@ -51,7 +51,6 @@ public class MedBox : MonoBehaviour
             button.GetComponent<Button>().interactable = true;
             button.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
         }
-        buttonObjectRefs[0].GetComponent<Image>().sprite = spriteOptions[1];
     }
 
     private void DisableChoice()

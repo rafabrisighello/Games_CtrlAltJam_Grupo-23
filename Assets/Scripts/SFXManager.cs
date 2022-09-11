@@ -83,6 +83,12 @@ public class SFXManager : MonoBehaviour
             case "BackButton":
                 sfxIndex = 3;
                 break;
+            case "ProceedButton":
+                sfxIndex = 4;
+                break;
+            case "ApplyButton":
+                sfxIndex = 5;
+                break;
             default:
                 sfxIndex = 0;
                 break;

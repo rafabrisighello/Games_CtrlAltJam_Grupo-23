@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameLoop : MonoBehaviour
 {
@@ -48,9 +49,16 @@ public class GameLoop : MonoBehaviour
 
     private void OnEnable()
     {
-        proceedButton.SetActive(false);
-        applyButton.SetActive(false);
-        bossButton.SetActive(false);
+        proceedButton.GetComponent<Button>().enabled = false;
+        proceedButton.GetComponent<Image>().enabled = false;
+
+        applyButton.GetComponent<Button>().enabled = false;
+        applyButton.GetComponent<Image>().enabled = false;
+        applyButton.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+
+        bossButton.GetComponent<Button>().enabled = false;
+        bossButton.GetComponent<Image>().enabled = false;
+        bossButton.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
 
         // Subscrição dos métodos aos eventos do cliente
         client.OnClientEmptyAction += FinalResults;
@@ -130,6 +138,7 @@ public class GameLoop : MonoBehaviour
         applyButton.SetActive(true);
         applyButton.GetComponent<Button>().enabled = true;
         applyButton.GetComponent<Image>().enabled = true;
+        applyButton.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
     }
 
     IEnumerator Proceed()
@@ -146,6 +155,7 @@ public class GameLoop : MonoBehaviour
         bossButton.SetActive(true);
         bossButton.GetComponent<Button>().enabled = true;
         bossButton.GetComponent<Image>().enabled = true;
+        bossButton.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
     }
 
     public void MedChoice()

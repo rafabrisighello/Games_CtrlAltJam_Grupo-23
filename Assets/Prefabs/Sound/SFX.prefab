@@ -147,8 +147,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6362dc82c01266f4099527e462c7538b, type: 3}
   - {fileID: 8300000, guid: 2a4aaac7e3d8dc84facd026a69574973, type: 3}
   - {fileID: 8300000, guid: 9d255dbf95218104a87ea1459a9c60aa, type: 3}
-  - {fileID: 8300000, guid: 58de79d478d179d48914882b9b61794c, type: 3}
-  - {fileID: 8300000, guid: 21f0e19cc37c22e499d86284b29a7295, type: 3}
-  - {fileID: 8300000, guid: f83aa42b6bd2e6b40838125551b3bcca, type: 3}
-  - {fileID: 8300000, guid: a9041f15a000b7748bc04d401019aa86, type: 3}
   buttons: []
+  gameloop: {fileID: 0}
+  client: {fileID: 0}
