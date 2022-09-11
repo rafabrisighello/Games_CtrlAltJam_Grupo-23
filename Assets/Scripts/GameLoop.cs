@@ -29,7 +29,12 @@ public class GameLoop : MonoBehaviour
     [SerializeField]
     private GameObject applyButton;
 
+    // Referência ao botão para aplicar o remédio
+    [SerializeField]
+    private GameObject bossButton;
+
     // Eventos
+    public event Action OnBossIntroAction; // Introdução do chefe
     public event Action OnGameStartAction; // Início do jogo
     public event Action OnMedAppliedAction; // Remédio foi escolhido
     public event Action OnColateralEffectAction; // Apresentação de efeitos colaterais
@@ -43,14 +48,15 @@ public class GameLoop : MonoBehaviour
 
     private void OnEnable()
     {
-        proceedButton.GetComponent<Button>().enabled = false;
-        proceedButton.GetComponent<Image>().enabled = false;
-        applyButton.GetComponent<Button>().enabled = false;
-        applyButton.GetComponent<Image>().enabled = false;
+        proceedButton.SetActive(false);
+        applyButton.SetActive(false);
+        bossButton.SetActive(false);
 
         // Subscrição dos métodos aos eventos do cliente
         client.OnClientEmptyAction += FinalResults;
         client.OnClientEndAction += EnableProceed;
+        client.OnBossDismiss += StartGame;
+        client.OnBossProceedAction += EnableBossButton;
 
         // Subscrição dos métodos aos eventos do Remédio
         medicine.OnMedChosenAction += EnableApplyButton;
@@ -61,6 +67,12 @@ public class GameLoop : MonoBehaviour
     {
         reputation = 0;
         StartCoroutine(Intro());
+    }
+
+    private void StartGame()
+    {
+        bossButton.SetActive(false);
+        StartCoroutine(BeginGame());
     }
 
     private void EnableProceed()
@@ -83,7 +95,18 @@ public class GameLoop : MonoBehaviour
         StartCoroutine(ApplyButton());
     }
 
+    private void EnableBossButton()
+    {
+        StartCoroutine(BossButton());
+    }
+
     IEnumerator Intro()
+    {
+        yield return new WaitForSeconds(1.0f);
+        OnBossIntroAction();
+    }
+
+    IEnumerator BeginGame()
     {
         yield return new WaitForSeconds(1.0f);
         OnGameStartAction();
@@ -115,6 +138,14 @@ public class GameLoop : MonoBehaviour
         proceedButton.SetActive(true);
         proceedButton.GetComponent<Button>().enabled = true;
         proceedButton.GetComponent<Image>().enabled = true;
+    }
+
+    IEnumerator BossButton()
+    {
+        yield return new WaitForSeconds(1.0f);
+        bossButton.SetActive(true);
+        bossButton.GetComponent<Button>().enabled = true;
+        bossButton.GetComponent<Image>().enabled = true;
     }
 
     public void MedChoice()

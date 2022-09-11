@@ -45,11 +45,16 @@ public class Client : MonoBehaviour
     [SerializeField]
     private Sprite[] assetArray;
 
+    [SerializeField]
+    private bool proceed = false;
+
     private System.Random random;
 
     public event Action OnClientLoaded;
     public event Action OnClientEndAction;
     public event Action OnClientEmptyAction;
+    public event Action OnBossDismiss;
+    public event Action OnBossProceedAction;
 
     private void Awake()
     {
@@ -67,6 +72,7 @@ public class Client : MonoBehaviour
     private void OnEnable()
     {
         gameloop = GameObject.FindWithTag("GameManager").GetComponent<GameLoop>();
+        gameloop.OnBossIntroAction += BossIntro;
         gameloop.OnGameStartAction += ChangeClient;
         gameloop.OnMedAppliedAction += Colateral;
         gameloop.OnChangeClientAction += ChangeClient;
@@ -74,17 +80,14 @@ public class Client : MonoBehaviour
         random = new System.Random();
     }
 
-    enum Casos
-    {
-        BodyBuilder,
-        Nadador,
-        Religiosa,
-        Palhaço
-    };
-
     public int GetClientIndex()
     {
         return currentIndex;
+    }
+
+    private void BossIntro()
+    {
+        StartCoroutine(Boss());
     }
 
     public void ChangeClient()
@@ -146,6 +149,31 @@ public class Client : MonoBehaviour
         gameloop.SetReputation(currentResults[choice]);
         yield return new WaitForSeconds(1.0f);
         ClientCheck();
+    }
+
+    IEnumerator Boss()
+    {
+        yield return new WaitForSeconds(1.0f);
+        currentImage = avatarArray[9];
+        imageBox.SetSprite(currentImage);
+        currentText = "Gerente: Iai meu chapa.Tu que é o novo estagiário, né?";
+        textBox.SetCurrentText(currentText);
+        OnBossProceedAction();
+        yield return new WaitWhile(() => !proceed);
+        ToggleProceed();
+        currentText = "Gerente: Quando chegar alguém tu ouve o problema da pessoa e pega os remédios pra resolver esse problema específico.";
+        textBox.SetCurrentText(currentText);
+        yield return new WaitWhile(() => !proceed);
+        ToggleProceed();
+        currentText = "Gerente: Só presta atenção na descrição de cada remédio porque TODOS tem algum efeito colateral, então se o cliente não gostar a farmácia fica mal vista.";
+        textBox.SetCurrentText(currentText);
+        yield return new WaitWhile(() => !proceed);
+        ToggleProceed();
+        currentText = "Gerente: A sorte é que o patrão não é mão de vaca e deixa no estoque pelo menos uns 3 remédios pra cada problema, só escolher o menos pior e torcer pra dar bom. Entendeu?";
+        textBox.SetCurrentText(currentText);
+        yield return new WaitWhile(() => !proceed);
+        ToggleProceed();
+        OnBossDismiss();
     }
 
     public void GetClientInfo(int index)
@@ -239,6 +267,9 @@ public class Client : MonoBehaviour
                 frases[3] = "Logo depois ele começa a se tremer e seus olhos se acendem. A última coisa que você se lembra é de um grande clarão. Ter se autodestruído com certeza não agradou o cliente.";
                 deltaReputation[2] = 0;
                 break;
+            case 9:
+                frases[0] = "Gerente: Iai meu chapa. Tu que é o novo estagiário, né? \n Já sabe como tudo aqui funciona ou quer que eu te explique?";
+                break;
         }
 
         currentFrases = frases;
@@ -282,6 +313,15 @@ public class Client : MonoBehaviour
         colateralArray[8, 0] = assetArray[33];
         colateralArray[8, 1] = assetArray[34];
         colateralArray[8, 2] = assetArray[35];
+    }
+
+   public void ToggleProceed()
+    {
+        if (proceed)
+        {
+            proceed = false;
+        }
+        else proceed = true;
     }
 
 }
